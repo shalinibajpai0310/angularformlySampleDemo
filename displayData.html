@@ -1,0 +1,25 @@
+<div class="container col-md-4 col-md-offset-4">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Country</th>
+        <th ng-if="user.above18">PanCard</th>
+        <th ng-if="user.country === 'India' && user.above18">Adhaar Card</th>
+      </tr>
+    </thead>
+    <tbody>
+       <tr>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.country}}</td>
+        <td ng-if="user.above18">{{user.panNo}}</td>
+        <td ng-if="user.country === 'India' && user.above18">{{user.adhaarNo}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/api-check/7.5.5/api-check.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-formly/8.4.0/formly.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-formly-templates-bootstrap/6.4.0/angular-formly-templates-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.1.4/ui-bootstrap-tpls.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+
+  <body ng-app="formlyApp" ng-controller="userFormly as user">
+    <div class="container col-md-4 col-md-offset-4">
+      <form novalidate="">
+        <h1>Enter Details</h1>
+        <formly-form model="user.rental" fields="user.rentalFields" form="user.rentalForm">
+          <button type="submit" class="btn btn-primary" ng-disabled="user.rentalForm.$invalid" ng-click="showData()">Submit</button>
+        </formly-form>
+      </form>
+    </div>
+  </body>
+
+</html>
